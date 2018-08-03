@@ -1,15 +1,15 @@
 def substrings(str, dict)
 	
 	str = str.downcase.split(/\W/).select{ |item| item != "" }
-	my_hash = {}
+	my_hash = Hash.new(0)
 
 
 	str.each_entry do |el|
 		dict.each_entry do |word|
 			if el.include? word
-				if !(my_hash.key?(word))
-					my_hash[word] = 0
-				end
+				# if !(my_hash.key?(word))
+				# 	my_hash[word] = 0
+				# end
 				my_hash[word] += 1
 			end
 		end
