@@ -1,5 +1,6 @@
 # These are my solutions to the code quizzes on recursion
 # using Ruby, available here http://www.codequizzes.com/computer-science/beginner/recursion
+
 def factorial(n)
   return 1 if n == 0
   return n * factorial(n - 1)
