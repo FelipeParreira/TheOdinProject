@@ -1,6 +1,6 @@
 # Blogger 2
 
-This is the project of a simple blog, developed using the Ruby on Rails framework. Its purpose is to get familiar with the basic file structure and commands of Rails and with the deployment process with Heroku.
+This is the project of a simple blog, developed using the Ruby on Rails framework. Its purpose is to get familiar with the basic file structure and commands of Rails and with the deployment process with Heroku (click [here](https://warm-basin-63355.herokuapp.com/) if you want to see the deployed blog).
 
 It was developed following the steps outlined in the [Jumpstart Lab’s Blogger Tutorial](http://tutorials.jumpstartlab.com/projects/blogger.html), using Ruby 2.5.1 and Rails 5.2.0.
 
