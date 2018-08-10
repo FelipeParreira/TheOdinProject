@@ -1,4 +1,4 @@
-# README
+# Blogger 2
 
 This is the project of a simple blog, developed using the Ruby on Rails framework. Its purpose is to get familiar with the basic file structure and commands of Rails and with the deployment process with Heroku.
 
