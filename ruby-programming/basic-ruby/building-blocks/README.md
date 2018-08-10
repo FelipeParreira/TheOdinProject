@@ -1,6 +1,6 @@
 # BUILDING BLOCKS
 
-These are my solutions to the three projects on the Building Blocks Lessons for the Ruby Programming track.
+These are my solutions to the three projects on the Building Blocks lesson for the Ruby Programming track.
 
 Here is a brief description of these projects:
 
