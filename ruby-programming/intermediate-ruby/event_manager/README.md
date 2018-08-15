@@ -2,6 +2,8 @@
 
 This is my solution to the project on the "Project: Event Manager" lesson for the Ruby Programming track.
 
+## Description
+
 Here is a brief description of this project:
 
 A friend of mine runs a non-profit org around political activism. A number of people have registered for an upcoming event. 
