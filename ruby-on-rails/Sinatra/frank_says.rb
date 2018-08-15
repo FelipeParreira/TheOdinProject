@@ -1,3 +1,4 @@
+# code available on http://sinatrarb.com
 require 'sinatra'
 
 get '/frank-says' do
