@@ -1,6 +1,6 @@
 # merges two sorted arrays, resulting in a merged sorted array
 def merge(arr1, arr2)
-  total_length = arr1.length + arr2.length
+  total_length, i = arr1.length + arr2.length, 1
   new_arr = []
   for i in 1..total_length
     new_element = arr1[0].nil? ? arr2.shift : (arr2[0].nil? ? arr1.shift : (arr1[0] < arr2[0] ? arr1.shift : arr2.shift))
