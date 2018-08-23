@@ -15,3 +15,6 @@ The Enumerable module that gets mixed into the Array and Hash classes (among oth
 methods. This is a rebuilding of those methods.
 
 From The Odin Project's [curriculum](https://www.theodinproject.com/courses/ruby-programming/lessons/advanced-building-blocks)
+
+---
+Obs.: the file recursion.rb are my solutions to the problems listed [here](http://www.codequizzes.com/computer-science/beginner/recursion)
