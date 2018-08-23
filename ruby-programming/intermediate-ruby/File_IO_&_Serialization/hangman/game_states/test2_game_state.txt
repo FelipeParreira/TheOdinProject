@@ -1,0 +1,6 @@
+    number_of_guesses = 6
+    secret_word_string = "gentile"
+    secret_word = ["__", "__", "n", "t", "i", "l", "__"]
+    letter_correct_guesses = ["g", "e", "__", "__", "__", "__", "e"]
+    letter_wrong_guesses = []
+    win = false

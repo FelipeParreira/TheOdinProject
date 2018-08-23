@@ -1,0 +1,7 @@
+number_of_guesses = 6
+secret_word = 'gentile'
+secret_word_string = secret_word
+secret_word = secret_word.split('')
+letter_correct_guesses = Array.new(secret_word.length, '__')
+letter_wrong_guesses = []
+win = false
