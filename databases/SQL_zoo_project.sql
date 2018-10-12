@@ -879,7 +879,7 @@ SELECT DISTINCT c.num, c.comp, f.name, d.num, d.comp
 FROM (SELECT a.company comp, a.num num, b.stop stop FROM route a JOIN route b ON (a.company = b.company AND a.num = b.num) WHERE a.stop = (SELECT id FROM stops WHERE name = 'Craiglockhart')) c JOIN
 (SELECT p.company comp, p.num num, p.stop stop FROM route p JOIN route q ON (p.company = q.company AND p.num = q.num) WHERE q.stop = (SELECT id FROM stops WHERE name = 'Sighthill')) d
 ON c.stop = d.stop
-JOIN stops f  ON f.id = c.stop WHERE f.name != 'Craiglockhart' AND f.name != 'Sighthill';
+JOIN stops f  ON f.id = c.stop WHERE f.name != 'Craiglockhart' AND f.name != 'Sighthill' AND (c.num != d.num OR c.comp != d.comp);
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~
 -- ~~~~~~~~~~~~~~~~~~~~~~~~
