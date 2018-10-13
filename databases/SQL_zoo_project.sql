@@ -209,11 +209,11 @@ OR (subject = 'Literature' AND yr >= 2004);
 
 -- 11
 SELECT * FROM nobel
-WHERE winner = 'PETER GRÜNBERG';
+WHERE winner = 'Peter Grünberg';
 
 -- 12
 SELECT * FROM nobel
-WHERE winner = 'EUGENE O\'NEILL';
+WHERE winner = 'Eugene O\'neill';
 
 -- 13
 SELECT winner, yr, subject FROM nobel
@@ -224,8 +224,8 @@ ORDER BY yr DESC, winner;
 SELECT winner, subject
 FROM nobel
 WHERE yr=1984
-ORDER BY subject IN ('Phys
-  ics','Chemistry'), subject, winner;
+ORDER BY CASE WHEN subject IN ('Physics','Chemistry') THEN 1 ELSE 0 END, 
+subject, winner;
 
 -- ========================
 -- 4 SELECT within SELECT Tutorial
