@@ -881,6 +881,37 @@ FROM (SELECT a.company comp, a.num num, b.stop stop FROM route a JOIN route b ON
 ON c.stop = d.stop
 JOIN stops f  ON f.id = c.stop WHERE f.name != 'Craiglockhart' AND f.name != 'Sighthill' AND (c.num != d.num OR c.comp != d.comp);
 
+-- ========================
+-- White X-mas
+-- ========================
+   
+-- 1
+SELECT m8/10 FROM hadcet
+WHERE yr=1964 AND dy=10;
+                                                                                                                                      
+-- 2
+SELECT yr-1811 AS age, m12/10 AS temp FROM hadcet
+WHERE yr BETWEEN 1812 and 1812 + 11 AND dy=25;
+                                                                                                                                      
+-- 3
+SELECT DISTINCT yr - 1811 AS age, CASE WHEN (MIN(m12) >= 0) THEN NULL ELSE 'white' END AS wc 
+FROM hadcet
+WHERE yr BETWEEN 1812 and 1812+11 AND dy BETWEEN 21 AND 25 
+GROUP BY yr;
+                                                                                                                                      
+-- 4
+SELECT yob, COUNT(wc) AS wcc FROM 
+(SELECT yob, yr - yob + 1 AS age, CASE WHEN (MIN(m12) < 0)  THEN 'white' ELSE NULL END AS wc FROM hadcet 
+ CROSS JOIN (SELECT yr as yob FROM hadcet) x
+ WHERE yr BETWEEN yob + 2 and yob + 11 AND dy <= 25 AND dy >= 21 GROUP BY yob, age) y  
+GROUP BY yob HAVING COUNT(wc) >= 7;
+                                                                                                                                      
+-- 5
+SELECT CASE WHEN ROUND(yr, -1) > yr THEN ROUND(yr, -1) - 10 ELSE ROUND(yr, -1) END AS decade, 
+ROUND(AVG(NULLIF(m8,-999))/10,1) AS 'avg. temp. August'
+FROM hadcet
+GROUP BY CASE WHEN ROUND(yr, -1) > yr THEN ROUND(yr, -1) - 10 ELSE ROUND(yr, -1) END;
+                                                                                                                                      
 -- ~~~~~~~~~~~~~~~~~~~~~~~~
 -- ~~~~~~~~~~~~~~~~~~~~~~~~
 -- QUIZZES
